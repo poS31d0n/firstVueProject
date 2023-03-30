@@ -1,0 +1,15 @@
+.row_element_flex {
+	height: 33%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.row_content_flex {
+	height: 100%;
+	width: 25%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}

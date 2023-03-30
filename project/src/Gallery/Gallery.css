@@ -1,0 +1,34 @@
+.menu {
+	height: 100%;
+	width: 100%;
+	padding: 20px;
+	border: 2px solid white;
+	border-radius: 0px 10px 10px 10px;
+	background: rgba(252, 242, 255, 0.2);
+}
+
+.information {
+	/*  */
+	display: none;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+}
+
+.flex_my {
+	/*  */
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+}
+
+
+.grid_my {
+	/*  */	
+	display: none;
+	height: 100%;
+	width: 100%;
+}

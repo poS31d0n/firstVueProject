@@ -1,0 +1,14 @@
+.radios {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 10%;
+	height: 70%;
+	border: 2px solid white;
+	border-radius: 10px;
+}
+
+
+.text {
+	color: white;
+}
