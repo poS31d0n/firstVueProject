@@ -1,10 +1,10 @@
 <template>
 	<header>
-		<Header @addNum="getNewCharacters"></Header>
+		<Header @addNum="getNum"></Header>
 	</header>
 	<main>
 		<section class="main__top">
-			<MyRadio></MyRadio>
+			<MyRadio @giveRadio="giveRadio"></MyRadio>
 		</section>
 		<section class="main__display">
 			<MyDisplay></MyDisplay>
@@ -17,10 +17,13 @@
 </template>
 
 <script>
+
 import Header from './Header/Header';
 import MyRadio from './MyRadio/MyRadio';
 import MyDisplay from './MyDisplay/MyDisplay';
 import Gallery from './Gallery/Gallery';
+import getNewCharacters from '@/helpers/getNewCharacters'
+
 export default {
 	components: {
     Header,
@@ -30,13 +33,20 @@ export default {
 	},
 	data() {
 		return {
-			num: ''
+			num: '',
+			radio: '',
+			masObj: [{}]
 		}
 	},
 	methods: {
-		getNewCharacters(scoreImages) {
+		giveRadio(typeRadio) {
+			this.radio = typeRadio;
+		},
+		getNum(scoreImages) {
 			this.num = Number(scoreImages);	
 			console.log(this.num);
+			this.masObj = getNewCharacters(this.radio, this.num);
+			console.log(this.masObj);
     }
 	},
 
