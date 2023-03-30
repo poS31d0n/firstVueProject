@@ -1,7 +1,7 @@
 <template>
 	<form @submit.prevent>
-		<my-input placeholder="Введите количество картинок"></my-input>
-		<my-button>Search</my-button>
+		<my-input v-model="num" type="number" placeholder="Введите количество картинок"></my-input>
+		<my-button @click="buttonClick">Search</my-button>
 	</form>
 </template>
 
@@ -14,6 +14,21 @@ export default {
 		MyButton,
 		MyInput,
 	},
+	data() {
+		return {
+			num: '',
+		}
+	},
+	methods: {
+		getNum(score) {
+			this.num = score;
+		},
+		buttonClick() {
+			if (this.num >= 0)
+				this.$emit('addNum', this.num);
+			this.num = '';
+		}
+	}
 };
 </script>
 

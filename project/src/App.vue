@@ -1,6 +1,6 @@
 <template>
 	<header>
-		<Header></Header>
+		<Header @addNum="getNewCharacters"></Header>
 	</header>
 	<main>
 		<section class="main__top">
@@ -27,7 +27,18 @@ export default {
 		MyRadio,
     MyDisplay,
 		Gallery
-}
+	},
+	data() {
+		return {
+			num: ''
+		}
+	},
+	methods: {
+		getNewCharacters(scoreImages) {
+			this.num = Number(scoreImages);	
+			console.log(this.num);
+    }
+	},
 
 }
 </script>
