@@ -22,19 +22,20 @@ import Header from './Header/Header';
 import MyRadio from './MyRadio/MyRadio';
 import MyDisplay from './MyDisplay/MyDisplay';
 import Gallery from './Gallery/Gallery';
-import getNewCharacters from '@/helpers/getNewCharacters'
+import getNewCharacters from './helpers/getNewCharacters'
 
 export default {
 	components: {
-    Header,
+    	Header,
 		MyRadio,
-    MyDisplay,
-		Gallery
+    	MyDisplay,
+		Gallery,
+		// getNewCharacters
 	},
 	data() {
 		return {
 			num: '',
-			radio: '',
+			radio: 'picsum',
 			masObj: [{}]
 		}
 	},
@@ -45,6 +46,7 @@ export default {
 		getNum(scoreImages) {
 			this.num = Number(scoreImages);	
 			console.log(this.num);
+			console.log(this.radio);
 			this.masObj = getNewCharacters(this.radio, this.num);
 			console.log(this.masObj);
     }

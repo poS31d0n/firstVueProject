@@ -1,3 +1,4 @@
+import getNewCharacters from "./getNewCharacters"
 export default getNewCharacters = async (radio, number = 12) => {
 	const checks = document.querySelectorAll('.form-check-input');
 	checks.forEach(function(ch) {
