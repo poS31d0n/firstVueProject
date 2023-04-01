@@ -51,8 +51,7 @@ export default {
 					{ id: 11, name: 'AAA'},
 					{ id: 12, name: 'AAA'}
 			]
-			},
-			
+			}
 		}
 	},
 	methods: {
@@ -66,8 +65,7 @@ export default {
 			// this.masObj = getNewCharacters(this.radio, this.num);
 			// console.log(this.masObj);
 		}
-	},
-
+	}
 }
 </script>
 
