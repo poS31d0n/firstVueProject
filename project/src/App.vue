@@ -10,7 +10,7 @@
 			<MyDisplay></MyDisplay>
 		</section>
 		<section class="main__bottom">
-			<Gallery></Gallery>
+			<Gallery :data="data"></Gallery>
 		</section>
 	</main>
 	
@@ -26,30 +26,46 @@ import getNewCharacters from './helpers/getNewCharacters'
 
 export default {
 	components: {
-    	Header,
+			Header,
 		MyRadio,
-    	MyDisplay,
+			MyDisplay,
 		Gallery,
 		// getNewCharacters
 	},
 	data() {
 		return {
-			num: '',
-			radio: 'picsum',
-			masObj: [{}]
+			data: {
+				num: '',
+				radio: 'picsum',
+				masObj: [
+					{ id: 1, name: 'AAA'},
+					{ id: 2, name: 'AAA'},
+					{ id: 3, name: 'AAA'},
+					{ id: 4, name: 'AAA'},
+					{ id: 5, name: 'AAA'},
+					{ id: 6, name: 'AAA'},
+					{ id: 7, name: 'AAA'},
+					{ id: 8, name: 'AAA'},
+					{ id: 9, name: 'AAA'},
+					{ id: 10, name: 'AAA'},
+					{ id: 11, name: 'AAA'},
+					{ id: 12, name: 'AAA'}
+			]
+			},
+			
 		}
 	},
 	methods: {
 		giveRadio(typeRadio) {
-			this.radio = typeRadio;
+			this.data.radio = typeRadio;
 		},
 		getNum(scoreImages) {
-			this.num = Number(scoreImages);	
-			console.log(this.num);
-			console.log(this.radio);
-			this.masObj = getNewCharacters(this.radio, this.num);
-			console.log(this.masObj);
-    }
+			this.data.num = Number(scoreImages);	
+			console.log(this.data.num);
+			console.log(this.data.radio);
+			// this.masObj = getNewCharacters(this.radio, this.num);
+			// console.log(this.masObj);
+		}
 	},
 
 }

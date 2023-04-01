@@ -4,10 +4,10 @@
 			<p class="text text-uppercase text__info">Waiting</p>
 		</div>
 		<div class="flex_my">
-			<MyRowFlex></MyRowFlex>
+			<MyRowFlex :data="data"></MyRowFlex>
 		</div>
 		<div class="grid_my">
-			<MyRowGrid></MyRowGrid>
+			<MyRowGrid :data="data"></MyRowGrid>
 		</div>
 	</div>
 </template>
@@ -20,7 +20,13 @@ export default {
   components: { 
 		MyRowFlex,
 		MyRowGrid
-	}
+	},
+  props: {
+    data: {
+      type: Object,
+      required: true
+    }
+  }
 }
 </script>
 
