@@ -3,7 +3,6 @@ async function initAPIpicsum(i){
 	let init;
 	let j;
 
-	
 	init = await axios.get(`https://picsum.photos/v2/list?page=0&limit=${i}`);
 	
 
@@ -20,6 +19,8 @@ async function initAPIpicsum(i){
 
 async function getPicsumPhotos (i) {
 	let masObj
+
+	console.log('33')
 
 	if (i > data.maxPicsum) {
 
@@ -39,3 +40,4 @@ async function getPicsumPhotos (i) {
 
 	return masObj;
 }
+
