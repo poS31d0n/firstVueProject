@@ -1,10 +1,18 @@
 
 async function initAPIrick(i){
-	let init;
+	let dataRick = [];
+	let str = '';
 	let j;
 
+	for(j = 1; j <= i; j++)
+		str +=`${j},`;
+	str = str.slice(0, -1); 
+	console.log(str);
+	console.log('/////' + i);
+	// console.log('/////' + init);
 
-    init = await axios.get(`https://rickandmortyapi.com/api/character/${i}`);
+    let init = await axios.get(`https://rickandmortyapi.com/api/character/${str}`);
+	console.log(init);
 
 	for(j = 0; j < i; j++) {
 		dataRick[j] = {
@@ -13,35 +21,28 @@ async function initAPIrick(i){
 			url: init.data[j].image
 		}
 	}
-
 	return dataRick
 }
 
-async function getRickAndMortyCharacters (i) {
+getRickAndMortyCharacters = async (i) => {
+	let masObj
 
+	console.log('download rick')
+	// if (i > data.maxRick) {
 
-	if (i > data.maxRick) {
+	// 	elem = document.querySelector(".information");
+	// 	backDisp = document.querySelector(`.${data.displayButton}_my`);
 
-		elem = document.querySelector(".information");
-		backDisp = document.querySelector(`.${data.displayButton}_my`);
+	// 	backDisp.style.display = 'none';
+	// 	elem.style.display = 'flex';
 
-		backDisp.style.display = 'none';
-		elem.style.display = 'flex';
+	// 	elem.firstElementChild.innerHTML = "Waiting Rick and Morty";
 
-		elem.firstElementChild.innerHTML = "Waiting Rick and Morty";
+		masObj = await initAPIrick(i);
 
-		await initAPIrick(i);
+	// 	backDisp.style.display = `${data.displayButton}`;
+	// 	elem.style.display = 'none';
+	// }
 
-		backDisp.style.display = `${data.displayButton}`;
-		elem.style.display = 'none';
-	}
-
-	let doc = document.querySelectorAll(".row_element_flex");
-	for (let item of doc)
-		item.remove();
-	doc = document.querySelectorAll(".row_element_grid");
-	for (let item of doc)
-		item.remove();
-
-	undateContent(dataRick, i);
+	return masObj;
 }

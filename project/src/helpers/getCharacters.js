@@ -34,10 +34,8 @@ getNewCharacters = async (radio, number = 12) => {
 		case 'picsum':
 			return await getPicsumPhotos(number);
 		case 'rick':
-			await getRickAndMortyCharacters(number);
-			break;
+			return await getRickAndMortyCharacters(number);
 		case 'pokemon':
-			await getPokemonCharacters(number);
-			break;
+			return await getPokemonCharacters(number);
 	}
 }

@@ -1,10 +1,11 @@
 
 async function initAPIpicsum(i){
+	let dataPicsum = [];
 	let init;
 	let j;
 
+
 	init = await axios.get(`https://picsum.photos/v2/list?page=0&limit=${i}`);
-	
 
 	for(j = 0; j < i; j++) {
 		dataPicsum[j] = {
@@ -13,16 +14,14 @@ async function initAPIpicsum(i){
 			url: init.data[j].download_url
 		};
 	}
-
 	return dataPicsum;
 }
 
-async function getPicsumPhotos (i) {
+getPicsumPhotos = async (i) => {
 	let masObj
 
-	console.log('33')
-
-	if (i > data.maxPicsum) {
+	console.log('download picsum')
+	// if (i > data.maxPicsum) {
 
 		// elem = document.querySelector(".information");
 		// backDisp = document.querySelector(`.${data.displayButton}_my`);
@@ -36,8 +35,7 @@ async function getPicsumPhotos (i) {
 		
 		// backDisp.style.display = `${data.displayButton}`;
 		// elem.style.display = 'none';
-	}
+	// }
 
 	return masObj;
 }
-

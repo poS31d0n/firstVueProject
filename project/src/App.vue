@@ -17,16 +17,15 @@
 </template>
 
 <script>
-
 import Header from './Header/Header';
 import MyRadio from './MyRadio/MyRadio';
 import MyDisplay from './MyDisplay/MyDisplay';
 import Gallery from './Gallery/Gallery';
+
 import getCharacters from './helpers/getCharacters';
 import setPicsumPhotos from './helpers/setPicsumPhotos'
 import setRickAndMortyCharacters from './helpers/setRickAndMortyCharacters'
-
-// import setPicsumPhoto from './setPicsumPhotos'
+import setPokemonCharacters from './helpers/setPokemonCharacters'
 
 import asd from './helpers/asd'
 
@@ -42,20 +41,7 @@ export default {
 			data: {
 				num: '',
 				radio: 'picsum',
-				masObj: [
-					{ id: 1, name: 'AAA'},
-					{ id: 2, name: 'AAA'},
-					{ id: 3, name: 'AAA'},
-					{ id: 4, name: 'AAA'},
-					{ id: 5, name: 'AAA'},
-					{ id: 6, name: 'AAA'},
-					{ id: 7, name: 'AAA'},
-					{ id: 8, name: 'AAA'},
-					{ id: 9, name: 'AAA'},
-					{ id: 10, name: 'AAA'},
-					{ id: 11, name: 'AAA'},
-					{ id: 12, name: 'AAA'}
-			]
+				masObj: []
 			}
 		}
 	},
@@ -67,10 +53,10 @@ export default {
 			this.data.num = Number(scoreImages);	
 			// console.log(this.data.num);
 			// console.log(this.data.radio);
-			// this.data.masObj = await getNewCharacters(this.data.radio, this.data.num);
-			await getRickAndMortyCharacters()
-			console.log(this.masObj);
-			sayHi();
+			this.data.masObj = await getNewCharacters(this.data.radio, this.data.num);
+			// getRickAndMortyCharacters()
+			console.log(this.data.masObj);
+			// sayHi();
 		}
 	},
 	created() {
