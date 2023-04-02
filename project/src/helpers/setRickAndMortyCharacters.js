@@ -8,7 +8,7 @@ async function initAPIrick(i){
 		str +=`${j},`;
 	str = str.slice(0, -1); 
 
-    let init = await axios.get(`https://rickandmortyapi.com/api/character/${str}`);
+		let init = await axios.get(`https://rickandmortyapi.com/api/character/${str}`);
 
 	for(j = 0; j < i; j++) {
 		dataRick[j] = {
@@ -21,24 +21,5 @@ async function initAPIrick(i){
 }
 
 getRickAndMortyCharacters = async (i) => {
-	let masObj
-
-	console.log('download rick')
-	// if (i > data.maxRick) {
-
-	// 	elem = document.querySelector(".information");
-	// 	backDisp = document.querySelector(`.${data.displayButton}_my`);
-
-	// 	backDisp.style.display = 'none';
-	// 	elem.style.display = 'flex';
-
-	// 	elem.firstElementChild.innerHTML = "Waiting Rick and Morty";
-
-		masObj = await initAPIrick(i);
-
-	// 	backDisp.style.display = `${data.displayButton}`;
-	// 	elem.style.display = 'none';
-	// }
-
-	return masObj;
+	return await initAPIrick(i);
 }

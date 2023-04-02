@@ -27,8 +27,6 @@ import setPicsumPhotos from './helpers/setPicsumPhotos'
 import setRickAndMortyCharacters from './helpers/setRickAndMortyCharacters'
 import setPokemonCharacters from './helpers/setPokemonCharacters'
 
-import asd from './helpers/asd'
-
 export default {
 	components: {
 			Header,
