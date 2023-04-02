@@ -46,8 +46,9 @@ export default {
 		}
 	},
 	methods: {
-		giveRadio(typeRadio) {
+		giveRadio(typeRadio, mas) {
 			this.data.radio = typeRadio;
+			this.data.masObj = mas;
 		},
 		async getNum(scoreImages) {
 			this.data.num = Number(scoreImages);	
@@ -59,8 +60,8 @@ export default {
 			// sayHi();
 		}
 	},
-	created() {
-		console.log('www');
+	async created() {
+		this.data.masObj = await getNewCharacters(this.data.radio);
 	}
 }
 </script>

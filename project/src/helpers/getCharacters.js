@@ -11,18 +11,10 @@ getNewCharacters = async (radio, number = 12) => {
 	  });
 	});
 
-	
-	console.log(radio);
-	console.log(number);
-
 	if (!radio)
 		for(let item of checks)
 			if (item.checked === true)
 				radio = item.id;
-
-	if (document.querySelector(`#${radio}`).checked === false)
-		return;
-
 
 	if (number === "")
 		number = 12;

@@ -7,12 +7,8 @@ async function initAPIrick(i){
 	for(j = 1; j <= i; j++)
 		str +=`${j},`;
 	str = str.slice(0, -1); 
-	console.log(str);
-	console.log('/////' + i);
-	// console.log('/////' + init);
 
     let init = await axios.get(`https://rickandmortyapi.com/api/character/${str}`);
-	console.log(init);
 
 	for(j = 0; j < i; j++) {
 		dataRick[j] = {

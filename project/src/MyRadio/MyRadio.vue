@@ -42,24 +42,9 @@ export default {
           });
         });
       });
-      this.$emit("giveRadio", name);
-      await getNewCharacters();
+      this.$emit("giveRadio", name, await getNewCharacters(name));
     },
   },
-  // updated() {
-  //   console.log('1');
-  // const checks = document.querySelectorAll(".form-check-input");
-  // 		checks.forEach(function (ch) {
-  // 			ch.addEventListener("click", function () {
-  // 				let that = this;
-  // 				checks.forEach(function (ch2) {
-  // 				if (ch2 != that)
-  // 					ch2.checked = false;
-  // 				});
-  // 			});
-  // 		});
-  // 	this.$emit("giveRadio", name);
-  // }
 };
 </script>
 
