@@ -1,5 +1,5 @@
 <template>
-	<img src="https://picsum.photos/id/3/5000/3333" class="image" alt="">
+	<img src="../photo/images.png" class="image" alt="">
 </template>
 
 <script>

@@ -1,8 +1,10 @@
 <template>
 	<div class="row_element_flex" >
 		<div class="row_content_flex" v-for="cont in data.masObj">
-			<MyImage :id="cont.id" :src="cont.url" class="img-thumbnail image" alt=""/>
-			<p id="text_name_flex_0" class="text">{{cont.name}}</p><p id="text_data_flex_0" class="text">{{ cont.id }}</p>
+			<MyImage v-if="cont.url" :src="cont.url" class="image-flex" alt=""/>
+			<MyImage v-else class="image-flex" alt=""/>
+			<p class="text">{{ cont.name }}</p>
+			<p class="text">{{ cont.id }}</p>
 		</div>
 	</div>
 </template>

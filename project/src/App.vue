@@ -23,9 +23,9 @@ import MyDisplay from './MyDisplay/MyDisplay';
 import Gallery from './Gallery/Gallery';
 
 import getCharacters from './helpers/getCharacters';
-import setPicsumPhotos from './helpers/setPicsumPhotos'
-import setRickAndMortyCharacters from './helpers/setRickAndMortyCharacters'
-import setPokemonCharacters from './helpers/setPokemonCharacters'
+import setPicsumPhotos from './helpers/setPicsumPhotos';
+import setRickAndMortyCharacters from './helpers/setRickAndMortyCharacters';
+import setPokemonCharacters from './helpers/setPokemonCharacters';
 
 export default {
 	components: {

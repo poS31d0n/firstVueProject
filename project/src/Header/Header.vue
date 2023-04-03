@@ -1,7 +1,7 @@
 <template>
 	<form @submit.prevent>
 		<my-input v-model="num" type="number" placeholder="Введите количество картинок"></my-input>
-		<my-button @click="buttonClick">Search</my-button>
+		<my-button :disabled="!num" @click="buttonClick">Search</my-button>
 	</form>
 </template>
 

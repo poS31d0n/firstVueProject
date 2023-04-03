@@ -10,7 +10,7 @@ async function initAPIpokemon(i){
 		dataPokemon[j] = {
 			id: '',
 			name: init.data.results[j].name,
-			url: "@/background.webp"
+			url: ""
 		};
 	}
 	return dataPokemon;
