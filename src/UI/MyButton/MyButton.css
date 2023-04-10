@@ -1,0 +1,22 @@
+.btn {
+	width: 23%;
+	background: #0d6efd;
+	color: white;
+	border: 1px solid white;
+	border-radius: 10px;
+}
+
+.btn-display {
+	width: 100%;
+	height: 100%;
+	background-color: #0d6efd;
+
+}
+.btn-display:first-child {
+	border-right: 1px solid white;
+	border-radius: 7px 0px 0px 0px;
+}
+.btn-display:last-child {
+	border-left: 1px solid white;
+	border-radius: 0px 7px 0px 0px;
+}

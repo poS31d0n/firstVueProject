@@ -1,0 +1,26 @@
+main {
+	width: auto;
+	height: 80%;
+	padding: 0% 2% 2% 2%;
+}
+.display {
+	display: flex;
+	width: 10%;
+}
+.gallery {
+  height: 100%;
+  overflow: auto;
+	border: 1px solid white;
+	border-radius: 0px 10px 10px 10px;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+	align-items: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
