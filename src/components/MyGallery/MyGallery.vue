@@ -11,13 +11,14 @@
       />
     </div>
 		<div :class="['gallery', styleType]">
-			<MyImage :images="images" :styleType="styleType"/>
+			<MyImage :styleType="styleType" :images="images"/>
 		</div>
   </main>
 </template>
 
 <script>
 import { MyButton, MyImage } from "@/UI";
+
 export default {
   name: "MyGallery",
   components: { MyButton, MyImage },
