@@ -1,5 +1,5 @@
 export const apiNames = {
-  picsum: "piscum",
+  picsum: "picsum",
   rick: "rick",
   pokemon: "pokemon",
 };

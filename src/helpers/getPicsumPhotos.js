@@ -2,8 +2,8 @@ import axios from "axios";
 
 const getPicsumPhotos = async (i) => {
   let dataPicsum = [];
-
 	const response = await axios.get(`https://picsum.photos/v2/list?page=0&limit=${i}`);
+  console.log('sorry');
 
 	const init = response.data;
 

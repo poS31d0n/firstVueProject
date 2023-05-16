@@ -4,7 +4,7 @@ export const useApiStore = defineStore("apiStore", {
   state: () => {
     return {
       images: [
-        {name: 'piscum', number: 0 },
+        {name: 'picsum', number: 0 },
         {name: 'rick', number: 0},
         {name: 'pokemon', number: 0},
       ],
